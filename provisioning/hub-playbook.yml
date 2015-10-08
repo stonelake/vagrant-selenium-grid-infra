@@ -1,0 +1,8 @@
+---
+- hosts: all
+  vars:
+    sel_role: hub
+  roles:
+    - common-rhel
+    - java-openjdk
+    - selenium

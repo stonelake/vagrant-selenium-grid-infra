@@ -1,0 +1,14 @@
+---
+- name: update system packages
+  yum: name=* state=latest
+  become: yes
+  become_method: sudo
+
+- name: install development packages
+  yum: name={{ item }} state=present
+  become: yes
+  become_method: sudo
+  with_items:
+          - "\"@Development tools\""
+          - nano
+          - epel-release

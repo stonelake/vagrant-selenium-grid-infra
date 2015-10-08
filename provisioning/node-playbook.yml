@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    sel_role: node
+  roles:
+    - common-rhel
+    - java-openjdk
+    - xvfb
+    - selenium
